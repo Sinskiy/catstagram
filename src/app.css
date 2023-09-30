@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* variables */
+:root {
+  --outline: 159 141 132;
+  --primary: 255 182 141;
+  --background: 32 26 23;
+  --on-background: 236 224 219;
+  --secondary-container: 92 65 49;
+  --on-secondary-container: 255 219 201;
+  --surface-high: 47 41 37;
+  --surface-container: 36 30 27;
+  --on-surface: 208 196 191;
+}
+/* normalizing */
+html {
+  color-scheme: dark;
+  accent-color: rgb(var(--primary));
+  background-color: rgb(var(--background));
+}
+body {
+  margin: 0;
+  min-width: 100%;
+  font-family: 'Syne', sans-serif;
+}
+/* typography */
+.md {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  letter-spacing: 0.5px;
+}
+/* small components */
+.divider {
+  min-width: 100%;
+  border-top: 1px solid rgb(var(--outline));
+}
+.button {
+  display: flex;
+  border-radius: 9999px;
+  white-space: nowrap;
+  padding: 0.75rem 2rem;
+}
