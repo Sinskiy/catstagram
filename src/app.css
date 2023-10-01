@@ -5,6 +5,7 @@
 :root {
   --outline: 159 141 132;
   --primary: 255 182 141;
+  --on-primary: 83 34 0;
   --background: 32 26 23;
   --on-background: 236 224 219;
   --secondary-container: 92 65 49;
@@ -28,8 +29,20 @@ body {
 .md {
   font-size: 0.75rem;
   font-weight: 600;
-  line-height: 1rem;
   letter-spacing: 0.5px;
+}
+.xl {
+  font-size: 0.75rem;
+  color: rgb(var(--primary));
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.body {
+  color: rgb(var(--on-surface));
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-align: justify;
 }
 /* small components */
 .divider {
@@ -40,5 +53,17 @@ body {
   display: flex;
   border-radius: 9999px;
   white-space: nowrap;
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 2rem;
+}
+.button-outline {
+  border: solid 2px rgb(var(--outline));
+  padding: 0.25rem 1rem;
+}
+.radio-full {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  opacity: 0;
 }

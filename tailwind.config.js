@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        onSurface: 'rgb(var(--on-surface) / <alpha-value>)'
+        primary: 'rgb(var(--primary) / <alpha-value>)',
+        onSurface: 'rgb(var(--on-surface) / <alpha-value>)',
+        surfaceHigh: 'rgb(var(--surface-high) / <alpha-value>)',
+        outline: 'rgb(var(--outline) / <alpha-value>)'
       }
     }
   },

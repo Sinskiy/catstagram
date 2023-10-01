@@ -5,7 +5,7 @@
 <div class="radiogroup md" role="radiogroup">
   {#each radios as radio, i}
     <label>
-      <input type="radio" name="tag" checked={i === 0} />
+      <input class="radio-full" type="radio" name="tag" checked={i === 0} />
       <div class="button">{radio}</div>
     </label>
   {/each}
@@ -17,15 +17,10 @@
     gap: 0.25rem;
     font-weight: 600;
     overflow-y: scroll;
+    margin-bottom: 1rem;
   }
   .radiogroup label {
     position: relative;
-  }
-  .radiogroup input {
-    min-width: 100%;
-    min-height: 100%;
-    position: absolute;
-    opacity: 0;
   }
   .radiogroup input ~ .button {
     background-color: rgb(var(--surface-high));
