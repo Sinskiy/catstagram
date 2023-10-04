@@ -6,10 +6,14 @@
   --outline: 159 141 132;
   --primary: 255 182 141;
   --on-primary: 83 34 0;
+  --secondary: 229 190 170;
   --background: 32 26 23;
-  --on-background: 236 224 219;
+  --primary-container: 118 51 0;
+  --on-primary-container: 255 219 201;
   --secondary-container: 92 65 49;
   --on-secondary-container: 255 219 201;
+  --tertiary-container: 74 72 29;
+  --on-tertiary-container: 233 229 171;
   --surface-high: 47 41 37;
   --surface-container: 36 30 27;
   --on-surface: 208 196 191;
@@ -26,20 +30,34 @@ body {
   font-family: 'Syne', sans-serif;
 }
 /* typography */
-.md {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
 .xl {
   font-size: 0.75rem;
   color: rgb(var(--primary));
   font-weight: 800;
   letter-spacing: 1px;
 }
+::placeholder,
+input[type='search'],
+.xmd {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+}
+.section-title {
+  color: rgb(var(--secondary));
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  letter-spacing: 0.5px;
+}
+.md {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
 .body {
   color: rgb(var(--on-surface));
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
   text-align: justify;
@@ -51,9 +69,19 @@ body {
 }
 .button {
   display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 9999px;
   white-space: nowrap;
   padding: 0.5rem 2rem;
+  transition: all 0.5s;
+}
+.button:hover {
+  filter: brightness(1.2);
+}
+.button:active {
+  filter: brightness(1.2);
+  scale: 0.8;
 }
 .button-outline {
   border: solid 2px rgb(var(--outline));

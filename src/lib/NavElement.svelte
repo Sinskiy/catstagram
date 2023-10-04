@@ -11,7 +11,7 @@
 
 <a
   class:active={url.includes(path)}
-  class="flex flex-wrap flex-col content-center gap-1 md capitalize"
+  class="flex flex-wrap flex-col content-center gap-1 min-w-[33%] md capitalize"
   href={path}
 >
   <div class="nav-el-wrapper rounded-full flex justify-center px-4 py-1">

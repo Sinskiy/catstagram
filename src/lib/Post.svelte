@@ -8,7 +8,7 @@
   <div class="flex justify-between">
     <div class="flex gap-4">
       <img src="1.svg" alt={`profile picture of ${name}`} />
-      <h2 class="self-center xl">{`@${name}`}</h2>
+      <h3 class="self-center xl">{`@${name}`}</h3>
     </div>
     <p class="md self-center opacity-30">59m ago</p>
   </div>

@@ -5,4 +5,6 @@
 </script>
 
 <Radiogroup {radios} />
-<Post />
+<section>
+  <Post />
+</section>

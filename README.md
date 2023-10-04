@@ -1,2 +1,3 @@
 work in progress...
-current stage: html & css
+current stage: auth
+next stage: posts
