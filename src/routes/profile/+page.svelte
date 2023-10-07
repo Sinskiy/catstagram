@@ -1,4 +1,6 @@
 <script>
+  import Profile from '../../lib/Profile.svelte'
+
   export let data
 
   let { supabase } = data
@@ -11,35 +13,18 @@
       }
     })
   }
-
-  async function logout() {
-    await supabase.auth.signOut()
-  }
 </script>
 
 {#if data.session}
-  <h2>
-    logged in! {data.session.user.user_metadata.name}
-    {data.session.user.user_metadata.email}
-  </h2>
-  <div class="flex flex-col gap-2 mt-12 xmd">
-    <button
-      on:click={logout}
-      class="button bg-tertiaryContainer text-onTertiaryContainer min-w-full"
-    >
-      Log out
-    </button>
-  </div>
+  <Profile user={data.session.user.user_metadata} />
 {:else}
   <h2 class="flex flex-col items-center section-title mt-auto">
     You're not logged in
   </h2>
-  <div class="flex flex-col gap-2 mt-12 xmd">
-    <button
-      on:click={signInWithGoogle}
-      class="button bg-tertiaryContainer text-onTertiaryContainer min-w-full"
-    >
-      Log in with Google
-    </button>
-  </div>
+  <button
+    on:click={signInWithGoogle}
+    class="button bg-tertiaryContainer text-onTertiaryContainer min-w-full mt-12"
+  >
+    Log in with Google
+  </button>
 {/if}

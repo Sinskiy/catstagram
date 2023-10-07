@@ -20,6 +20,8 @@
 
     return () => subscription.unsubscribe()
   })
+
+  $: console.log(session.user.user_metadata)
 </script>
 
 <svelte:head>
