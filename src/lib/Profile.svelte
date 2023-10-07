@@ -1,7 +1,7 @@
 <script>
   import Post from './Post.svelte'
 
-  export let user
+  export let user, supabase
 
   async function logout() {
     await supabase.auth.signOut()

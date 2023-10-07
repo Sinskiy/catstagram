@@ -16,7 +16,7 @@
 </script>
 
 {#if data.session}
-  <Profile user={data.session.user.user_metadata} />
+  <Profile user={data.session.user.user_metadata} {supabase} />
 {:else}
   <h2 class="flex flex-col items-center section-title mt-auto">
     You're not logged in

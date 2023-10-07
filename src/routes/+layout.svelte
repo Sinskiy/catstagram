@@ -21,7 +21,7 @@
     return () => subscription.unsubscribe()
   })
 
-  $: console.log(session.user.user_metadata)
+  $: console.log(session)
 </script>
 
 <svelte:head>
