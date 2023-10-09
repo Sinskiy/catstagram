@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         primary: 'rgb(var(--primary) / <alpha-value>)',
+        onPrimary: 'rgb(var(--on-primary) / <alpha-value>)',
         surfaceContainer: 'rgb(var(--surface-container) / <alpha-value>)',
         surfaceHigh: 'rgb(var(--surface-high) / <alpha-value>)',
         secondaryContainer: 'rgb(var(--secondary-container) / <alpha-value>)',

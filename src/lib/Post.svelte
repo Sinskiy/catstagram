@@ -4,7 +4,7 @@
   const name = 'sinskiy_'
 </script>
 
-<div class="flex flex-col bg-surfaceHigh rounded-2xl p-6 gap-2 mb-2">
+<article class="flex flex-col bg-surfaceHigh rounded-2xl p-6 gap-2 mb-2">
   <div class="flex justify-between">
     <div class="flex gap-4">
       <img src="1.svg" alt={`profile picture of ${name}`} />
@@ -28,7 +28,7 @@
       0
     </button>
   </div>
-</div>
+</article>
 
 <style lang="postcss">
   .like-wrapper > input + .button-outline {

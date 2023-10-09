@@ -15,7 +15,7 @@
 <div class="px-4">
   <div class="relative flex">
     <input
-      class="min-w-full rounded-full py-6 px-20 bg-surfaceHigh text-onSurface placeholder:text-onSurface"
+      class="min-w-full input rounded-full"
       type="search"
       name="search"
       placeholder="Search"

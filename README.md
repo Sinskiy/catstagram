@@ -1,3 +1,3 @@
 work in progress...
-current stage: edit profile page
+current stage: edit profile
 next stage: posts

@@ -20,8 +20,6 @@
 
     return () => subscription.unsubscribe()
   })
-
-  $: console.log(session)
 </script>
 
 <svelte:head>
