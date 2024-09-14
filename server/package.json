@@ -6,14 +6,21 @@
   "scripts": {
     "build": "tsc --watch",
     "server": "node --watch --env-file=.env dist/app.js",
-    "start": "npm run build & npm run server"
+    "start": "npm run build & npm run server",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@prisma/client": "^5.19.1",
     "express": "^4.21.0"
   },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
     "@types/express": "^4.17.21",
-    "prisma": "^5.19.1"
+    "@types/jest": "^29.5.13",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
+    "prisma": "^5.19.1",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5"
   }
 }

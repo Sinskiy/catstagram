@@ -1,5 +1,7 @@
 import express from "express";
-const app = express();
+export const app = express();
+
+app.get("/", (_, res) => res.send("hello world!"));
 
 const port = Number(process.env.PORT) || 3000;
 app.listen(
