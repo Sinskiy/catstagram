@@ -1,5 +1,7 @@
+import SignUp from "./views/SignUp";
+
 function App() {
-  return <>hi</>;
+  return <SignUp />;
 }
 
 export default App;
