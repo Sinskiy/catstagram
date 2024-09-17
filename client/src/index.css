@@ -1,1 +1,5 @@
 @postcss-material-colors (primary: #b7ff00);
+
+.main-heading {
+  font-size: 2rem;
+}

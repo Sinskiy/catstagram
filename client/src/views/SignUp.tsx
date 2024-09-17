@@ -3,12 +3,24 @@
 // @ts-expect-error lib
 import { Button, Form, InputField } from "@sinskiy/ui";
 import Hr from "../components/Hr";
+import styled from "styled-components";
+
+const Section = styled.section`
+  max-width: 480px;
+  margin: auto;
+`;
+
+const Oauth = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+`;
 
 // TODO: move to styled-components
 export default function SignUp() {
   return (
-    <section style={{ maxWidth: 480, margin: "auto" }}>
-      <h1 style={{ fontSize: "2rem" }}>sign up</h1>
+    <Section>
+      <h1 className="main-heading">sign up</h1>
       {/* UI: don't display errors if empty */}
       <Form>
         {/* UI: remove width: 100% */}
@@ -35,10 +47,10 @@ export default function SignUp() {
         />
       </Form>
       <Hr>or</Hr>
-      <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
+      <Oauth>
         <Button themeColor="primary-container">Continue with Google</Button>
         <Button themeColor="primary-container">Continue with GitHub</Button>
-      </div>
-    </section>
+      </Oauth>
+    </Section>
   );
 }
