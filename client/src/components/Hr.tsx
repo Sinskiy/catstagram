@@ -1,22 +1,30 @@
 import { PropsWithChildren } from "react";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  padding: 1.75rem 0;
+  position: relative;
+`;
+
+const Line = styled.hr`
+  margin: 0;
+`;
+
+const Text = styled.div`
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--background);
+  padding: 0 1rem;
+`;
 
 export default function Hr({ children }: PropsWithChildren) {
   return (
-    <div style={{ padding: "1rem 0", position: "relative" }}>
-      <hr style={{ margin: 0 }} />
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          margin: "auto",
-          width: "fit-content",
-          height: "fit-content",
-          backgroundColor: "var(--background)",
-          padding: "0 1rem",
-        }}
-      >
-        {children}
-      </div>
-    </div>
+    <Wrapper>
+      <Line />
+      <Text>{children}</Text>
+    </Wrapper>
   );
 }
