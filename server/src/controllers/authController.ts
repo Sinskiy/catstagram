@@ -24,3 +24,11 @@ export async function signUp(req: Request, res: Response) {
 
   res.json({ message: "OK" });
 }
+
+export function sessionGet(req: Request, res: Response) {
+  if (!req.user) {
+    throw new ErrorWithStatus(401, "Unauthorized");
+  }
+
+  res.json({ user: req.user });
+}
