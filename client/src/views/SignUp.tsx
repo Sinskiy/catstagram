@@ -1,22 +1,10 @@
-import { Button, Form, InputField } from "@sinskiy/ui";
-import Hr from "../components/Hr";
-import styled from "styled-components";
-
-const Section = styled.section`
-  max-width: 480px;
-  margin: auto;
-`;
-
-const Oauth = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-`;
+import { Form, InputField } from "@sinskiy/ui";
+import Section from "../components/Section";
+import Oauth from "./Oauth";
 
 export default function SignUp() {
   return (
-    <Section>
-      <h1 className="main-heading">sign up</h1>
+    <Section label="sign up" centered={true}>
       <Form>
         <InputField
           label="email"
@@ -32,11 +20,7 @@ export default function SignUp() {
           required
         />
       </Form>
-      <Hr>or</Hr>
-      <Oauth>
-        <Button themeColor="primary-container">Continue with Google</Button>
-        <Button themeColor="primary-container">Continue with GitHub</Button>
-      </Oauth>
+      <Oauth />
     </Section>
   );
 }
