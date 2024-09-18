@@ -7,7 +7,7 @@ export default function errorHandler(err: unknown, {}, res: Response, {}) {
   res.status(statusCode).json({ message: message });
 }
 
-class ErrorWithStatus extends Error {
+export class ErrorWithStatus extends Error {
   statusCode: number;
   constructor(statusCode: number, message: string) {
     super(message);
