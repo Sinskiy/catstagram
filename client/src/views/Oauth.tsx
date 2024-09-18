@@ -5,7 +5,7 @@ import Hr from "../components/Hr";
 const Styled = styled.div`
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 `;
 
 export default function Oauth() {

@@ -9,10 +9,16 @@ export default function Login() {
         <InputField
           label="email"
           type="email"
-          placeholder="john doe"
+          placeholder="sinskiy@proton.me"
+          autoComplete="email"
           required
         />
-        <InputField label="password" type="password" required />
+        <InputField
+          label="password"
+          type="password"
+          autoComplete="current-password"
+          required
+        />
       </Form>
       <Oauth />
       {/* TODO: add "or sign up" */}

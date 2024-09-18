@@ -9,14 +9,21 @@ export default function SignUp() {
         <InputField
           label="email"
           type="email"
-          placeholder="john doe"
+          placeholder="sinskiy@proton.me"
+          autoComplete="email"
           required
         />
-        <InputField label="password" type="password" required />
+        <InputField
+          label="password"
+          type="password"
+          autoComplete="new-password"
+          required
+        />
         <InputField
           label="confirm password"
           id="confirm-password"
           type="password"
+          autoComplete="new-password"
           required
         />
       </Form>
