@@ -2,9 +2,9 @@ import { Header } from "@sinskiy/ui";
 import { Link, NavLink, Outlet } from "react-router-dom";
 
 const links = [
-  { href: "/sign-up", label: "sign up" },
-  { href: "/login", label: "login" },
-];
+  { to: "/login", children: "login" },
+  { to: "/sign-up", children: "sign up" },
+] as const;
 
 export default function Root() {
   return (
@@ -15,9 +15,10 @@ export default function Root() {
             sinskiy
           </Link>
         }
-        navItems={links.map((link) => (
-          <NavLink to={link.href}>{link.label}</NavLink>
+        navItems={links.map(({ children, ...props }) => (
+          <NavLink {...props}>{children}</NavLink>
         ))}
+        linkButtonIndex={1}
       />
       <Outlet />
     </main>
