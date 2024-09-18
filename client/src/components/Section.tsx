@@ -11,7 +11,7 @@ const Styled = styled.section<{ $centered?: boolean }>`
   ${(props) =>
     props.$centered &&
     css`
-      max-width: 480px;
+      max-width: 360px;
       margin: auto;
     `}
 `;
