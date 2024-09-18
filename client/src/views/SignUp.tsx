@@ -1,6 +1,7 @@
 import { Form, InputField } from "@sinskiy/ui";
 import Section from "../components/Section";
 import Oauth from "./Oauth";
+import OtherAuth from "./OtherAuth";
 
 export default function SignUp() {
   return (
@@ -27,6 +28,7 @@ export default function SignUp() {
           required
         />
       </Form>
+      <OtherAuth type="login" />
       <Oauth />
     </Section>
   );
