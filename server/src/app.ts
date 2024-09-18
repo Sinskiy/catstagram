@@ -1,7 +1,8 @@
 import express from "express";
-export const app = express();
+import apiRouter from "./routes/index.js";
+const app = express();
 
-app.get("/", (_, res) => res.send("hello world!"));
+app.use("/", apiRouter);
 
 const port = Number(process.env.PORT) || 3000;
 app.listen(
