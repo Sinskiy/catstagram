@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { ErrorWithStatus } from "../middlewares/errorHandler.js";
 import { createUser, getUser } from "../services/userService.js";
+import bcrypt from "bcryptjs";
 
 export async function signUp(req: Request, res: Response) {
   const { username, email, password, confirmPassword } = req.body;
@@ -13,7 +14,13 @@ export async function signUp(req: Request, res: Response) {
     throw new ErrorWithStatus(400, "Email is not unique");
   }
 
-  await createUser({ username: username, email: email, password: password });
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  await createUser({
+    username: username,
+    email: email,
+    password: hashedPassword,
+  });
 
   res.json({ message: "OK" });
 }
