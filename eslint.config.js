@@ -11,6 +11,7 @@ export default tseslint.config(
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["server/**/*.ts"],
     languageOptions: { globals: globals.node },
+    rules: { "no-empty-pattern": 0 },
   },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
