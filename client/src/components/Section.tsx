@@ -8,11 +8,13 @@ interface SectionProps {
 }
 
 const Styled = styled.section<{ $centered?: boolean }>`
+  margin: 3rem 0;
   ${(props) =>
     props.$centered &&
     css`
       max-width: 360px;
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
     `}
 `;
 
