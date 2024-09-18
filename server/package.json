@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc --watch",
-    "server": "node --watch --env-file=.env dist/app.js",
-    "start": "npm run build & npm run server",
+    "serve": "node --watch --env-file=.env dist/app.js",
+    "start": "npm run build & npm run serve",
     "test": "jest --watch"
   },
   "dependencies": {
